@@ -25,10 +25,10 @@ def get_bounding_boxes(image_path, draw=False, output_path="output_with_bboxes.j
     
     # Define colors for each class_id
     colors = {
-        0: (255, 0, 0),    # Red for description
-        1: (0, 255, 0),    # Green for item area
-        2: (0, 0, 255),    # Blue for price
-        3: (255, 255, 0)   # Yellow for title
+        0: (255, 0, 0),    
+        1: (0, 255, 0),    
+        2: (0, 0, 255),   
+        3: (128, 0, 128)
     }
     
     # Extract bounding boxes, confidence scores, and class IDs
