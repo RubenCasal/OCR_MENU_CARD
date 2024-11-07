@@ -43,6 +43,22 @@ Cada elemento principal del menú (área completa de un plato) se analiza para d
 2. Utilizando una función de contención, se verifica si estos componentes secundarios están completamente contenidos dentro del área de cada elemento del menú.
 3. Finalmente, se organiza la información en un diccionario que asocia cada elemento del menú con sus componentes correspondientes.
 
+### Procesamiento de Datos Después del Modelo de Fine-Tuning
+
+Una vez segmentados los componentes en la carta del restaurante, se realiza un procesamiento de datos adicional para extraer y organizar la información de manera estructurada.
+
+1. **Filtrado de Elementos con Precio**: Solo se conservan los elementos que contienen una sección de `precio`, asegurando que cada elemento en el resultado tenga información de costo.
+
+2. **Ordenación de Elementos por Posición**: Los elementos detectados se ordenan de izquierda a derecha y de arriba a abajo en la carta, siguiendo criterios de `x1` (posición izquierda) y `y1` (posición superior). Esto permite presentar la información en un orden natural, similar al formato visual del menú.
+
+3. **Extracción de Texto con OCR**: 
+   - Para cada componente (`title`, `description` y `price`), se extrae el área correspondiente en la imagen.
+   - Cada imagen de componente es procesada para aumentar su resolución antes de aplicar OCR, mejorando la precisión del reconocimiento.
+   - Con el uso de **PaddleOCR** en español, se extrae el texto de cada componente, que luego se almacena en un archivo de texto estructurado, facilitando la manipulación y exportación de la información del menú.
+
+4. **Aumento de Resolución**: Para mejorar la precisión del OCR, cada componente es convertido a escala de grises y ampliado usando interpolación cúbica, lo que facilita la lectura del texto en imágenes de baja calidad o con resoluciones variables.
+
+Este proceso asegura que la información extraída esté organizada y lista para aplicaciones que requieren datos estructurados de cartas de restaurantes.
 
 
 
