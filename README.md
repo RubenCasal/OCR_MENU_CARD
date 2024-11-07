@@ -3,6 +3,29 @@
 ## Introducción
 Este proyecto tiene como objetivo facilitar la digitalización de cartas de restaurantes mediante el uso de reconocimiento óptico de caracteres (OCR). Utilizando un modelo de detección y segmentación basado en YOLOv8, el programa identifica secciones individuales en la carta, tales como nombres de platos, descripciones y precios. Una vez segmentado, el texto extraído es procesado y exportado en un formato estructurado a un archivo de texto (.txt), lo cual permite su fácil manipulación y almacenamiento.
 
-Este sistema puede ser utilizado en diversas aplicaciones, como la gestión digital de menús, actualización de precios, o análisis de ofertas gastronómicas. La solución fue desarrollada empleando técnicas avanzadas de entrenamiento de modelos OCR y una serie de transformaciones de datos para asegurar la precisión en los resultados.
+## Fine-Tuning de YOLOv8
+
+Para adaptar YOLOv8 a la detección y segmentación de componentes específicos en cartas de restaurantes, se ha realizado un ajuste fino (fine-tuning) del modelo utilizando un conjunto de datos personalizado. Este dataset incluye imágenes de menús de diferentes idiomas, tamaños y disposiciones, proporcionando una mayor versatilidad y precisión en la detección. Las etiquetas para la segmentación incluyen:
+
+- `0` - Descripción del plato: detalla los ingredientes o características.
+- `1` - Área de todos los componentes del plato: incluye todas las secciones visibles del plato.
+- `2` - Precio del plato: permite extraer el costo asociado.
+- `3` - Título del plato: contiene el nombre o título principal del plato.
+
+Estas etiquetas facilitan una detección precisa y organizada de los elementos más relevantes en una carta de restaurante.
+
+### Aumentación de Datos con Albumentations
+
+Para mejorar la robustez del modelo y su capacidad de generalización, se ha aplicado un conjunto de transformaciones de datos usando la librería **Albumentations**. Estas transformaciones incluyen:
+
+- Conversión a escala de grises.
+- Inversión horizontal aleatoria.
+- Ajuste de brillo y contraste aleatorio.
+- Desplazamiento, escalado y rotación para diferentes perspectivas.
+- Aplicación de desenfoque leve para simular distintos niveles de calidad de imagen.
+
+Estas aumentaciones ayudan al modelo a manejar variaciones en las cartas, como diferentes resoluciones, iluminaciones y orientaciones, logrando así un mejor rendimiento en situaciones reales.
 
 ---
+
+
