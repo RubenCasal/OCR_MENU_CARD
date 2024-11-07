@@ -59,6 +59,25 @@ Una vez segmentados los componentes en la carta del restaurante, se realiza un p
 4. **Aumento de Resolución**: Para mejorar la precisión del OCR, cada componente es convertido a escala de grises y ampliado usando interpolación cúbica, lo que facilita la lectura del texto en imágenes de baja calidad o con resoluciones variables.
 
 Este proceso asegura que la información extraída esté organizada y lista para aplicaciones que requieren datos estructurados de cartas de restaurantes.
+### Uso del Programa
+
+Para procesar una imagen de una carta de restaurante y extraer el texto estructurado, sigue estos pasos. Asegúrate de que el archivo `main.py` y todos los archivos de soporte estén correctamente ubicados.
+
+1. Coloca la imagen de la carta de restaurante en el directorio designado, en este ejemplo `./real_menu_card_images/`.
+2. Corre el script `main.py`, que contiene la función principal `process_menu_image` para procesar la imagen.
+
+#### Ejemplo de Ejecución
+
+```python
+from image_to_text.image_to_text import process_menu_image
+
+# Define las rutas de la imagen de entrada, imagen con bounding boxes y archivo de salida de texto
+test_image_path = "./real_menu_card_images/carta2.jpg"
+output_image_path = "output_with_bboxes.jpg"
+output_txt_path = "menu_text_output.txt"
+
+# Ejecuta el procesamiento
+process_menu_image(test_image_path, output_image_path, output_txt_path)
 
 
 
