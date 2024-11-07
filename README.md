@@ -36,12 +36,13 @@ El modelo YOLOv8, entrenado en cartas de menú, permite extraer *bounding boxes*
 1. Se obtienen las coordenadas de cada *bounding box* junto con su clase y confianza.
 2. Si se habilita, el programa también dibuja estas cajas en la imagen, creando una visualización útil para verificar la precisión del modelo.
 
-```python
-# Cargar el modelo YOLO
-model = YOLO('./yolov8_menu_card/menu_items_model/weights/best.pt')
+### Organización de Componentes por Elemento de Menú
+Cada elemento principal del menú (área completa de un plato) se analiza para detectar componentes secundarios que le pertenezcan, como el título, descripción y precio. Para ello:
 
-# Extraer bounding boxes de la imagen
-bounding_boxes = get_bounding_boxes(image_path, draw=True, output_path="output_with_bboxes.jpg")
+1. El modelo clasifica los bounding boxes en categorías de `título`, `descripción` y `precio` según sus etiquetas.
+2. Utilizando una función de contención, se verifica si estos componentes secundarios están completamente contenidos dentro del área de cada elemento del menú.
+3. Finalmente, se organiza la información en un diccionario que asocia cada elemento del menú con sus componentes correspondientes.
+
 
 
 
