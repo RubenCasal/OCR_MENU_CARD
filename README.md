@@ -64,6 +64,11 @@ Una vez segmentados los componentes en la carta del restaurante, se realiza un p
    - Con el uso de **PaddleOCR** en español, se extrae el texto de cada componente, que luego se almacena en un archivo de texto estructurado, facilitando la manipulación y exportación de la información del menú.
 
 4. **Aumento de Resolución**: Para mejorar la precisión del OCR, cada componente es convertido a escala de grises y ampliado usando interpolación cúbica, lo que facilita la lectura del texto en imágenes de baja calidad o con resoluciones variables.
+<p align="center">
+  <img src="readme_images/price_img_item_1.png" alt="Imagen 2" width="200"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- Ajusta la cantidad de espacios para simular el margen -->
+  <img src="readme_images/title_img_item_1.png" alt="Imagen 3" width="296"/>
+</p>
 
 Este proceso asegura que la información extraída esté organizada y lista para aplicaciones que requieren datos estructurados de cartas de restaurantes.
 ### Uso del Programa
