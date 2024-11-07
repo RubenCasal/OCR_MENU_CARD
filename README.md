@@ -1,5 +1,9 @@
 # OCR para Cartas de Restaurantes
 
+<p align="center">
+  <img src="readme_images/Diseño sin título.png" alt="Imagen 2" width="700"/>
+</p>
+
 ## Introducción
 Este proyecto tiene como objetivo facilitar la digitalización de cartas de restaurantes mediante el uso de reconocimiento óptico de caracteres (OCR). Utilizando un modelo de detección y segmentación basado en YOLOv8, el programa identifica secciones individuales en la carta, tales como nombres de platos, descripciones y precios. Una vez segmentado, el texto extraído es procesado y exportado en un formato estructurado a un archivo de texto (.txt), lo cual permite su fácil manipulación y almacenamiento.
 
