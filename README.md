@@ -26,6 +26,13 @@ Para mejorar la robustez del modelo y su capacidad de generalización, se ha apl
 
 Estas aumentaciones ayudan al modelo a manejar variaciones en las cartas, como diferentes resoluciones, iluminaciones y orientaciones, logrando así un mejor rendimiento en situaciones reales.
 
+
+<p align="center">
+  <img src="readme_images/output_with_bboxes.jpg" alt="Imagen 2" width="200"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- Ajusta la cantidad de espacios para simular el margen -->
+  <img src="readme_images/output_with_bboxes3.jpg" alt="Imagen 3" width="296"/>
+</p>
+
 ## Asignación de Componentes a Cada Elemento del Menú
 
 Este proyecto utiliza un modelo YOLOv8 entrenado específicamente para segmentar y clasificar elementos en cartas de restaurantes. La segmentación incluye identificar áreas de cada plato en la carta, sus títulos, descripciones y precios. La siguiente fase del procesamiento organiza estos componentes, asignándolos a cada elemento del menú detectado.
