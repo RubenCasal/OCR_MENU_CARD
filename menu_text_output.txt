@@ -1,8 +1,15 @@
-1: Pollo Alla Cacciatora  -> £18.50€
-2: Petto Di Pollo Alla Crema  -> £18.50€
-3: Calamari fritti Deep fried calamarirings -> £18.50€
-4: Tonno All Sarda  -> £19.50€
-5: Gamberoni Alla Provenciale sauce -> £23.95€
-6: Pesce Spada al limone Swordfish lightly cooked and topped with a special prepared wine and lemon -> sauce€
-7: Cozze Alla Marinara Black mussels cooked in garlic, tomato and white wine -> £18.50€
-8: Gamberoni all'aglio King prawns cooked in garlic and white wine -> £23.95€
+1: Spicy chicken  -> $33€
+2: Hot dog  -> $24€
+3: Milk Shake  -> $3€
+4: Iced Tea  -> $2€
+5: Orange Juice  -> $4€
+6: Coffee  -> $5€
+7: Cheeseburger  -> $34€
+8: Cheese sandwich  -> $22€
+9: Chicken burgers  -> $23€
+10: Lemon Tea  -> $3€
+11: Fruit Salad  -> $13€
+12: Nuggets  -> $14€
+13: Sandwich  -> $13€
+14: FrenchFries  -> $15€
+15: Cocktails  -> $12€

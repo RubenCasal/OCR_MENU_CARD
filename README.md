@@ -7,10 +7,10 @@ Este proyecto tiene como objetivo facilitar la digitalización de cartas de rest
 
 Para adaptar YOLOv8 a la detección y segmentación de componentes específicos en cartas de restaurantes, se ha realizado un ajuste fino (fine-tuning) del modelo utilizando un conjunto de datos personalizado. Este dataset incluye imágenes de menús de diferentes idiomas, tamaños y disposiciones, proporcionando una mayor versatilidad y precisión en la detección. Las etiquetas para la segmentación incluyen:
 
-- `0` - Descripción del plato: detalla los ingredientes o características.
-- `1` - Área de todos los componentes del plato: incluye todas las secciones visibles del plato.
-- `2` - Precio del plato: permite extraer el costo asociado.
-- `3` - Título del plato: contiene el nombre o título principal del plato.
+- `0` - Descripción del plato: detalla los ingredientes o características. <span style="display: inline-block; width: 12px; height: 12px; background-color: #FF0000; margin-left: 5px;"></span>
+- `1` - Área de todos los componentes del plato: incluye todas las secciones visibles del plato. <span style="display: inline-block; width: 12px; height: 12px; background-color: #00FF00; margin-left: 5px;"></span>
+- `2` - Precio del plato: permite extraer el costo asociado. <span style="display: inline-block; width: 12px; height: 12px; background-color: #0000FF; margin-left: 5px;"></span>
+- `3` - Título del plato: contiene el nombre o título principal del plato. <span style="display: inline-block; width: 12px; height: 12px; background-color: #FFFF00; margin-left: 5px;"></span>
 
 Estas etiquetas facilitan una detección precisa y organizada de los elementos más relevantes en una carta de restaurante.
 

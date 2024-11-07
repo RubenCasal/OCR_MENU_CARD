@@ -23,6 +23,14 @@ def get_bounding_boxes(image_path, draw=False, output_path="output_with_bboxes.j
     # Get predictions from the model
     results = model.predict(source=image, save=False)
     
+    # Define colors for each class_id
+    colors = {
+        0: (255, 0, 0),    # Red for description
+        1: (0, 255, 0),    # Green for item area
+        2: (0, 0, 255),    # Blue for price
+        3: (255, 255, 0)   # Yellow for title
+    }
+    
     # Extract bounding boxes, confidence scores, and class IDs
     bounding_boxes = []
     for box in results[0].boxes.data.cpu().numpy():
@@ -31,11 +39,11 @@ def get_bounding_boxes(image_path, draw=False, output_path="output_with_bboxes.j
         
         # Draw the bounding box if 'draw' is set to True
         if draw:
-            # Define color and label based on class_id
-            color = (0, 255, 0)  # Green for example
+            # Get color based on class_id, default to white if class_id is unknown
+            color = colors.get(int(class_id), (255, 255, 255))
             label = f"Class {class_id}: {confidence:.2f}"
             
-            # Draw the bounding box
+            # Draw the bounding box with the corresponding color
             cv2.rectangle(image, (int(x1), int(y1)), (int(x2), int(y2)), color, 2)
             # Add label text above the bounding box
             cv2.putText(image, label, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
